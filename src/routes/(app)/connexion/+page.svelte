@@ -18,6 +18,7 @@
 						'--toastBarBackground': '#2F855A'
 					}
 				});
+				await goto('/')
 			}
 		};
 	};
