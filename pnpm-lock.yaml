@@ -11,6 +11,7 @@ specifiers:
   '@types/cookie': ^0.5.1
   '@typescript-eslint/eslint-plugin': ^5.45.0
   '@typescript-eslint/parser': ^5.45.0
+  '@zerodevx/svelte-toast': 1.0.0-rc.1
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
@@ -26,6 +27,7 @@ specifiers:
 dependencies:
   '@supabase/auth-helpers-sveltekit': 0.8.6_x4wcza6jggiv5r5yndlyd26nkq
   '@supabase/supabase-js': 2.2.2
+  '@zerodevx/svelte-toast': 1.0.0-rc.1
 
 devDependencies:
   '@fontsource/fira-mono': 4.5.10
@@ -639,6 +641,10 @@ packages:
       '@typescript-eslint/types': 5.47.1
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@zerodevx/svelte-toast/1.0.0-rc.1:
+    resolution: {integrity: sha512-KEZUWeFg1MLlHVssx94ZWWKDBOlQUznTH7xsfZ3uPSYbD5NMO8jDEUGiDNiJ3aKpwiabGvZgG7NKJLFK0q/KYg==}
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.1:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}

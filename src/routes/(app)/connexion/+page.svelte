@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { toast } from '@zerodevx/svelte-toast';
 	import { applyAction, enhance, type SubmitFunction } from '$app/forms';
 	import type { ActionData } from './$types';
 	export let form: ActionData;
@@ -9,6 +10,15 @@
 		return async ({ result }) => {
 			await applyAction(result);
 			loading = false;
+			if (form?.message) {
+				toast.push('Success!', {
+					theme: {
+						'--toastColor': 'mintcream',
+						'--toastBackground': 'rgba(72,187,120,0.9)',
+						'--toastBarBackground': '#2F855A'
+					}
+				});
+			}
 		};
 	};
 </script>
@@ -19,12 +29,6 @@
 <h2> Sign in</h2>
 <div class="container">
 	<div class="form-container sign-in-container">
-		{#if form?.error}
-			<div class="block notification is-danger">{form.error}</div>
-		{/if}
-		{#if form?.message}
-			<div class="block notification is-primary">{form.message}</div>
-		{/if}
 		<form method="POST" use:enhance={handleSubmit}>
 			<h1>Sign in</h1>
 			<div class="social-container">
